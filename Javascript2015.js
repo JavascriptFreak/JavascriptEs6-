@@ -36,14 +36,29 @@ letExample()
 
 function constExample()
 {
-    console.log(x) // ReferenceError, because it doesn't exist yet (no hoisting)
+    // console.log(x) // ReferenceError, because it doesn't exist yet (no hoisting)
     const x = 20
 
     if(true)
     {
-        x = 30 
+        // x = 30 
         console.log(x) // Error: Assignment to constant variable
     }
  console.log(x)
 }
 constExample()
+
+
+//Arrow function
+
+function multiplication(number)  //normal function defination
+{
+    return number*10
+}
+
+
+let multiplicationArrow = number => console.log(number * 10 )//arrrow function no need return statement and one line function
+
+
+multiplication(50)
+multiplicationArrow(50)
