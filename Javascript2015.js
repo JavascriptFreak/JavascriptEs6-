@@ -62,3 +62,11 @@ let multiplicationArrow = number => console.log(number * 10 )//arrrow function n
 
 multiplication(50)
 multiplicationArrow(50)
+
+//convert the function myJob from ES5 syntax to arrow function syntax.
+// function myJob (name, profession) {
+//   return `Hi, my name is ${name} and I'm a ${profession}.`
+// }
+
+const myJob=(name,profession) => `Hi, my name is ${name} and I'm a ${profession}`
+console.log(myJob('aishwarya','developer'))
