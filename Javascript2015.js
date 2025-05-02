@@ -70,3 +70,37 @@ multiplicationArrow(50)
 
 const myJob=(name,profession) => `Hi, my name is ${name} and I'm a ${profession}`
 console.log(myJob('aishwarya','developer'))
+
+//object destruction
+const person = { name: "Aishwarya", age: 25 };
+
+let firstname =person.name //normal way
+console.log(firstname)
+const { name,age } = person //destruction
+console.log(name)
+
+const {name: firstName } = person //change the name of parameters
+const { college = 'HTW'} = person // default value assignment
+
+console.log(person)
+
+const user = {
+    id: 1,
+    profile: {
+      username: "akadam",
+      email: "aishwarya@example.com"
+    }
+  };
+
+const {
+     profile: { username ,email } //nested destruction
+} = user ;
+
+console.log(username)
+
+let userDetails=({profile:{ username,email} })=>console.log(`my email id is ${email} and username is ${username}`)
+
+userDetails(user)
+
+const {id, ...others} = user //rest operator
+console.log(others)
